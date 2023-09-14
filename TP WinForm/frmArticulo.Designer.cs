@@ -63,7 +63,7 @@
             this.groupBox1.Location = new System.Drawing.Point(27, 48);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(222, 244);
-            this.groupBox1.TabIndex = 31;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // labelCod
@@ -72,7 +72,7 @@
             this.labelCod.Location = new System.Drawing.Point(24, 31);
             this.labelCod.Name = "labelCod";
             this.labelCod.Size = new System.Drawing.Size(40, 13);
-            this.labelCod.TabIndex = 13;
+            this.labelCod.TabIndex = 0;
             this.labelCod.Text = "Código";
             // 
             // cbCat
@@ -81,14 +81,14 @@
             this.cbCat.Location = new System.Drawing.Point(91, 163);
             this.cbCat.Name = "cbCat";
             this.cbCat.Size = new System.Drawing.Size(107, 21);
-            this.cbCat.TabIndex = 24;
+            this.cbCat.TabIndex = 4;
             // 
             // tbCod
             // 
             this.tbCod.Location = new System.Drawing.Point(91, 28);
             this.tbCod.Name = "tbCod";
             this.tbCod.Size = new System.Drawing.Size(107, 20);
-            this.tbCod.TabIndex = 10;
+            this.tbCod.TabIndex = 0;
             // 
             // cbBrand
             // 
@@ -96,14 +96,14 @@
             this.cbBrand.Location = new System.Drawing.Point(91, 128);
             this.cbBrand.Name = "cbBrand";
             this.cbBrand.Size = new System.Drawing.Size(107, 21);
-            this.cbBrand.TabIndex = 23;
+            this.cbBrand.TabIndex = 3;
             // 
             // tbName
             // 
             this.tbName.Location = new System.Drawing.Point(91, 60);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(107, 20);
-            this.tbName.TabIndex = 15;
+            this.tbName.TabIndex = 1;
             // 
             // labelCat
             // 
@@ -111,7 +111,7 @@
             this.labelCat.Location = new System.Drawing.Point(24, 166);
             this.labelCat.Name = "labelCat";
             this.labelCat.Size = new System.Drawing.Size(54, 13);
-            this.labelCat.TabIndex = 22;
+            this.labelCat.TabIndex = 8;
             this.labelCat.Text = "Categoría";
             // 
             // labelName
@@ -120,7 +120,7 @@
             this.labelName.Location = new System.Drawing.Point(24, 63);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(44, 13);
-            this.labelName.TabIndex = 16;
+            this.labelName.TabIndex = 2;
             this.labelName.Text = "Nombre";
             // 
             // labelBrand
@@ -129,7 +129,7 @@
             this.labelBrand.Location = new System.Drawing.Point(24, 131);
             this.labelBrand.Name = "labelBrand";
             this.labelBrand.Size = new System.Drawing.Size(37, 13);
-            this.labelBrand.TabIndex = 21;
+            this.labelBrand.TabIndex = 6;
             this.labelBrand.Text = "Marca";
             // 
             // tbDesc
@@ -137,7 +137,7 @@
             this.tbDesc.Location = new System.Drawing.Point(91, 95);
             this.tbDesc.Name = "tbDesc";
             this.tbDesc.Size = new System.Drawing.Size(107, 20);
-            this.tbDesc.TabIndex = 17;
+            this.tbDesc.TabIndex = 2;
             // 
             // labelPrice
             // 
@@ -145,7 +145,7 @@
             this.labelPrice.Location = new System.Drawing.Point(24, 203);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(37, 13);
-            this.labelPrice.TabIndex = 20;
+            this.labelPrice.TabIndex = 10;
             this.labelPrice.Text = "Precio";
             // 
             // labelDesc
@@ -154,7 +154,7 @@
             this.labelDesc.Location = new System.Drawing.Point(24, 98);
             this.labelDesc.Name = "labelDesc";
             this.labelDesc.Size = new System.Drawing.Size(63, 13);
-            this.labelDesc.TabIndex = 18;
+            this.labelDesc.TabIndex = 4;
             this.labelDesc.Text = "Descripcion";
             // 
             // tbPrice
@@ -162,7 +162,7 @@
             this.tbPrice.Location = new System.Drawing.Point(91, 200);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(107, 20);
-            this.tbPrice.TabIndex = 19;
+            this.tbPrice.TabIndex = 5;
             // 
             // labelTitulo
             // 
@@ -171,7 +171,7 @@
             this.labelTitulo.Location = new System.Drawing.Point(24, 20);
             this.labelTitulo.Name = "labelTitulo";
             this.labelTitulo.Size = new System.Drawing.Size(90, 25);
-            this.labelTitulo.TabIndex = 30;
+            this.labelTitulo.TabIndex = 0;
             this.labelTitulo.Text = "Artículo:";
             // 
             // buttonAgregar
@@ -180,7 +180,7 @@
             this.buttonAgregar.Location = new System.Drawing.Point(174, 298);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(75, 23);
-            this.buttonAgregar.TabIndex = 32;
+            this.buttonAgregar.TabIndex = 2;
             this.buttonAgregar.Text = "Agregar";
             this.buttonAgregar.UseVisualStyleBackColor = true;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
