@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_WinForm;
 
 namespace TP_WinForm
 {
     public partial class Form1 : Form
     {
+        //List<Articulo> catalogo = new List<Articulo>();
         List<Articulo> catalogo = new List<Articulo>();
         public Form1()
         {
@@ -32,5 +34,26 @@ namespace TP_WinForm
             ventana.MdiParent = this;
             ventana.Show();
         }
+
+        private void listarTSP_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(Listar))
+                {
+                    return;
+                }
+            }
+
+            Listar ventana = new Listar(catalogo);
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }

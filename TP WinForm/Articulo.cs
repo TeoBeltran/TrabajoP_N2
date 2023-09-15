@@ -8,12 +8,12 @@ namespace TP_WinForm
 {
     public class Articulo
     {
-        public string codigo { get; set; }
-        public string nombre { get; set; }
-        public string descripcion { get; set; }
-        public string marca { get; set; }
-        public string categoria { get; set; }
-        public string img { get; set; }
-        public decimal precio { get; set; }
+        public string Codigo { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+        public int IdMarca { get; set; }
+        public int IdCategoria { get; set; }
+        //public string img { get; set; }
+        public decimal Precio { get; set; }
     }
 }
