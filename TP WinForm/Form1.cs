@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_WinForm;
+using dominio;
 
 namespace TP_WinForm
 {
