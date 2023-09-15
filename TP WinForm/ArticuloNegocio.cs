@@ -21,7 +21,7 @@ namespace TP_WinForm
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio From ARTICULOS";
+                comando.CommandText = "Select Codigo, Nombre, A.Descripcion, Precio, M.Descripcion as Marca, C.Descripcion as Categoria From ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca=M.Id AND A.IdCategoria = C.Id\r\n";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -33,8 +33,10 @@ namespace TP_WinForm
                     aux.Codigo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
-                    aux.IdMarca = (int)lector["IdMarca"];
-                    aux.IdCategoria = (int)lector["IdCategoria"];
+                    aux.IdMarca = new Marca();
+                    aux.IdMarca.Descripcion = (string)lector["Marca"];
+                    aux.IdCategoria=new Categoria();
+                    aux.IdCategoria.Descripcion = (string)lector["Categoria"];
                     aux.Precio = (decimal)lector["Precio"];
 
                     lista.Add(aux);
