@@ -31,8 +31,7 @@ namespace TP_WinForm
             }
             catch (Exception)
             {
-
-                MessageBox.Show("xd");
+                MessageBox.Show("error listar articulos");
             }
         }
 

@@ -52,5 +52,10 @@ namespace negocio
                 throw ex;
             }
         }
+
+        public void agregar(Articulo nuevo)
+        {
+
+        }
     }
 }
