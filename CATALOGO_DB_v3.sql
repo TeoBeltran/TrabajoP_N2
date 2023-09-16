@@ -109,4 +109,6 @@ Select * From ARTICULOS
 Select * From MARCAS
 Select * From CATEGORIAS
 
-Select Codigo, Nombre, A.Descripcion, Precio, M.Descripcion Marca, C.Descripcion Categoria From ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca=M.Id AND A.IdCategoria = C.Id
+Select Codigo, Nombre, A.Descripcion, Precio, M.Descripcion as Marca, C.Descripcion as Categoria From ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca=M.Id AND A.IdCategoria = C.Id
+
+insert into ARTICULOS values ('S02', 'aaaaaaaa', 'aaaaaaaaaaa', 2, 2, 100000)

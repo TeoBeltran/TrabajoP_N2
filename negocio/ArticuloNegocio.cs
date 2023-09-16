@@ -4,12 +4,12 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+//using System.Windows.Forms;
 using dominio;
 
-namespace TP_WinForm
+namespace negocio
 {
-    internal class ArticuloNegocio
+    public class ArticuloNegocio
     {
         public List<Articulo> listar()
         {
@@ -36,7 +36,7 @@ namespace TP_WinForm
                     aux.Descripcion = (string)lector["Descripcion"];
                     aux.IdMarca = new Marca();
                     aux.IdMarca.Descripcion = (string)lector["Marca"];
-                    aux.IdCategoria=new Categoria();
+                    aux.IdCategoria = new Categoria();
                     aux.IdCategoria.Descripcion = (string)lector["Categoria"];
                     aux.Precio = (decimal)lector["Precio"];
 
@@ -48,7 +48,7 @@ namespace TP_WinForm
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
                 throw ex;
             }
         }
