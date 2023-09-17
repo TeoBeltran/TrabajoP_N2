@@ -1,6 +1,6 @@
 ﻿namespace TP_WinForm
 {
-    partial class frmArticulo
+    partial class AgregarArticulo
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +44,11 @@
             this.labelTitulo = new System.Windows.Forms.Label();
             this.buttonAgregar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.pictureBoxUrl = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxUrl = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUrl)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -199,11 +203,38 @@
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
+            // pictureBoxUrl
+            // 
+            this.pictureBoxUrl.Location = new System.Drawing.Point(282, 108);
+            this.pictureBoxUrl.Name = "pictureBoxUrl";
+            this.pictureBoxUrl.Size = new System.Drawing.Size(166, 156);
+            this.pictureBoxUrl.TabIndex = 4;
+            this.pictureBoxUrl.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(306, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Url";
+            // 
+            // textBoxUrl
+            // 
+            this.textBoxUrl.Location = new System.Drawing.Point(341, 76);
+            this.textBoxUrl.Name = "textBoxUrl";
+            this.textBoxUrl.Size = new System.Drawing.Size(107, 20);
+            this.textBoxUrl.TabIndex = 11;
+            // 
             // frmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 383);
+            this.ClientSize = new System.Drawing.Size(496, 383);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxUrl);
+            this.Controls.Add(this.pictureBoxUrl);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAgregar);
             this.Controls.Add(this.groupBox1);
@@ -214,6 +245,7 @@
             this.Load += new System.EventHandler(this.frmArticulo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUrl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +269,8 @@
         private System.Windows.Forms.Label labelTitulo;
         private System.Windows.Forms.Button buttonAgregar;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.PictureBox pictureBoxUrl;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxUrl;
     }
 }

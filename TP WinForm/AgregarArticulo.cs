@@ -12,10 +12,10 @@ using negocio;
 
 namespace TP_WinForm
 {
-    public partial class frmArticulo : Form
+    public partial class AgregarArticulo : Form
     {
         private List<Articulo> catalogo;
-        public frmArticulo(List<Articulo> catalogo)
+        public AgregarArticulo(List<Articulo> catalogo)
         {
             InitializeComponent();
             this.catalogo = catalogo;

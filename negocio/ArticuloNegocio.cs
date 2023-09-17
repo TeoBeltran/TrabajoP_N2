@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-//using System.Windows.Forms;
 using dominio;
 
 namespace negocio
@@ -72,6 +71,54 @@ namespace negocio
             finally
             {
                 datos.cerrarConexion();
+            }
+        }
+
+        public Articulo BuscarPorCodigo(string codigo)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector = null;
+            Articulo articulo = null;
+
+            try
+            {
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion AS Marca, C.Descripcion AS Categoria FROM ARTICULOS A, MARCAS M, CATEGORIAS C WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id AND A.Codigo = @Codigo";
+                comando.Parameters.AddWithValue("@Codigo", codigo);
+                comando.Connection = conexion;
+
+                conexion.Open();
+                lector = comando.ExecuteReader();
+
+                if (lector.Read())
+                {
+                    articulo = new Articulo();
+                    articulo.Id = (int)lector["Id"];
+                    articulo.Codigo = (string)lector["Codigo"];
+                    articulo.Nombre = (string)lector["Nombre"];
+                    articulo.Descripcion = (string)lector["Descripcion"];
+                    articulo.IdMarca = new Marca();
+                    articulo.IdMarca.Descripcion = (string)lector["Marca"];
+                    articulo.IdCategoria = new Categoria();
+                    articulo.IdCategoria.Descripcion = (string)lector["Categoria"];
+                    articulo.Precio = (decimal)lector["Precio"];
+                }
+
+                return articulo;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (lector != null)
+                {
+                    lector.Close();
+                }
+                conexion.Close();
             }
         }
     }

@@ -27,13 +27,13 @@ namespace TP_WinForm
         {
             foreach (var item in Application.OpenForms)
             {
-                if (item.GetType() == typeof(frmArticulo))
+                if (item.GetType() == typeof(AgregarArticulo))
                 {
                     return;
                 }
             }
 
-            frmArticulo ventana = new frmArticulo(catalogo);
+            AgregarArticulo ventana = new AgregarArticulo(catalogo);
             ventana.MdiParent = this;
             ventana.Show();
         }
@@ -84,6 +84,21 @@ namespace TP_WinForm
             }
 
             ListarCategorias ventana = new ListarCategorias(categorias);
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void modificarTSP_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(ModificarArticulo))
+                {
+                    return;
+                }
+            }
+
+            ModificarArticulo ventana = new ModificarArticulo();
             ventana.MdiParent = this;
             ventana.Show();
         }
