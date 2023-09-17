@@ -23,7 +23,7 @@ namespace negocio
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria, I.ImagenUrl From ARTICULOS A, MARCAS M, CATEGORIAS C, IMAGENES I Where A.IdMarca=M.Id AND A.IdCategoria = C.Id AND A.Id=I.IdArticulo";
+                comando.CommandText = "Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria From ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca=M.Id AND A.IdCategoria = C.Id";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -32,6 +32,7 @@ namespace negocio
                 while (lector.Read())
                 {
                     Articulo aux = new Articulo();
+                    aux.Id = (int)lector["Id"];
                     aux.Codigo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
@@ -41,9 +42,6 @@ namespace negocio
                     aux.IdCategoria.Descripcion = (string)lector["Categoria"];
                     aux.Precio = (decimal)lector["Precio"];
 
-                    //aux.UrlImagen = new Imagen();
-                    aux.UrlImagen.ImagenUrl = (string)lector["UrlImagen"];
-
                     lista.Add(aux);
                 }
 
@@ -52,7 +50,6 @@ namespace negocio
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
                 throw ex;
             }
         }

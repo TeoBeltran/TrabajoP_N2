@@ -109,8 +109,10 @@ insert into imagenes values
 --Select * From MARCAS
 --Select * From CATEGORIAS
 
---Select A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria From ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca=M.Id AND A.IdCategoria = C.Id
+--Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria From ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca=M.Id AND A.IdCategoria = C.Id
 
 --insert into ARTICULOS values ('ABC', 'NombrePrueba', 'DescripPrueba', 1, 1, 656565)
 
  --delete from ARTICULOS Where Id = 7
+
+ --Select IdArticulo, ImagenUrl From IMAGENES Where IdArticulo=1;
