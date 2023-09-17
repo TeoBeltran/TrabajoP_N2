@@ -105,10 +105,12 @@ insert into imagenes values
 (5, 'https://cnnespanol2.files.wordpress.com/2015/12/gadgets-mc3a1s-populares-apple-tv-2015-18.jpg?quality=100&strip=info&w=460&h=260&crop=1')
 
 
-Select * From ARTICULOS
-Select * From MARCAS
-Select * From CATEGORIAS
+--Select * From ARTICULOS
+--Select * From MARCAS
+--Select * From CATEGORIAS
 
-Select Codigo, Nombre, A.Descripcion, Precio, M.Descripcion as Marca, C.Descripcion as Categoria From ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca=M.Id AND A.IdCategoria = C.Id
+--Select A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria From ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca=M.Id AND A.IdCategoria = C.Id
 
-insert into ARTICULOS values ('S02', 'aaaaaaaa', 'aaaaaaaaaaa', 2, 2, 100000)
+--insert into ARTICULOS values ('ABC', 'NombrePrueba', 'DescripPrueba', 1, 1, 656565)
+
+ --delete from ARTICULOS Where Id = 7

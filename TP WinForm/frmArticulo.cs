@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dominio;
+using negocio;
 
 namespace TP_WinForm
 {
@@ -19,33 +20,46 @@ namespace TP_WinForm
             InitializeComponent();
             this.catalogo = catalogo;
         }
-        private void buttonAgregar_Click(object sender, EventArgs e)
-        {
-            //Articulo nuevoArticulo = new Articulo
-            //{
-            //    codigo = tbCod.Text,
-            //    nombre = tbName.Text,
-            //    descripcion = tbDesc.Text,
-            //    marca = cbBrand.Text,
-            //    categoria = cbCat.Text,
-            //    img = AAA;
-            //    precio = Convert.ToDecimal(tbPrice.Text)
-            //};
-
-            // Agregar el artículo a la lista.
-            //catalogo.Add(nuevoArticulo);
-
-            MessageBox.Show("Articulo agregado!");
-            this.Close();
-        }
 
         private void frmArticulo_Load(object sender, EventArgs e)
         {
-            cbBrand.Items.Add("Adidas");
-            cbBrand.Items.Add("Nike");
-            cbCat.Items.Add("Prendas");
-            cbCat.Items.Add("Accesorios");
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            try
+            {
+                cbBrand.DataSource = marcaNegocio.ListarM();
+                cbCat.DataSource = categoriaNegocio.ListarC();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        private void buttonAgregar_Click(object sender, EventArgs e)
+        {
+            Articulo nuevoArticulo = new Articulo();
+            ArticuloNegocio negocio= new ArticuloNegocio();
+
+            try
+            {
+                nuevoArticulo.Codigo = tbCod.Text;
+                nuevoArticulo.Nombre = tbName.Text;
+                nuevoArticulo.Descripcion = tbDesc.Text;
+                nuevoArticulo.Precio = int.Parse(tbPrice.Text);
+
+                negocio.agregar(nuevoArticulo);
+                MessageBox.Show("Articulo agregado!");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

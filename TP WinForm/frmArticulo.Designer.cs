@@ -43,6 +43,7 @@
             this.tbPrice = new System.Windows.Forms.TextBox();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.buttonAgregar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -177,7 +178,7 @@
             // buttonAgregar
             // 
             this.buttonAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.buttonAgregar.Location = new System.Drawing.Point(174, 298);
+            this.buttonAgregar.Location = new System.Drawing.Point(27, 298);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(75, 23);
             this.buttonAgregar.TabIndex = 2;
@@ -185,11 +186,23 @@
             this.buttonAgregar.UseVisualStyleBackColor = true;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
             // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.buttonCancelar.Location = new System.Drawing.Point(174, 298);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelar.TabIndex = 3;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
             // frmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(283, 383);
+            this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAgregar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelTitulo);
@@ -221,5 +234,6 @@
         private System.Windows.Forms.TextBox tbPrice;
         private System.Windows.Forms.Label labelTitulo;
         private System.Windows.Forms.Button buttonAgregar;
+        private System.Windows.Forms.Button buttonCancelar;
     }
 }
