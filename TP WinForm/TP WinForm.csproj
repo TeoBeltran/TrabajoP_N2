@@ -64,6 +64,12 @@
     <Compile Include="Listar.Designer.cs">
       <DependentUpon>Listar.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListarCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarCategorias.Designer.cs">
+      <DependentUpon>ListarCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListarMarcas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Listar.resx">
       <DependentUpon>Listar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarCategorias.resx">
+      <DependentUpon>ListarCategorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListarMarcas.resx">
       <DependentUpon>ListarMarcas.cs</DependentUpon>

@@ -36,6 +36,7 @@
             this.eliminarTSP = new System.Windows.Forms.ToolStripMenuItem();
             this.listarTSP = new System.Windows.Forms.ToolStripMenuItem();
             this.marcasTSP = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarMarcasTSP = new System.Windows.Forms.ToolStripMenuItem();
             this.modMarcasTSP = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasTSP = new System.Windows.Forms.ToolStripMenuItem();
             this.modCatTSP = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +44,7 @@
             this.TSB1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.TSB2 = new System.Windows.Forms.ToolStripButton();
-            this.listarMarcasTSP = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarCategoriasTSP = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -74,26 +75,26 @@
             // agregarTSP
             // 
             this.agregarTSP.Name = "agregarTSP";
-            this.agregarTSP.Size = new System.Drawing.Size(180, 22);
+            this.agregarTSP.Size = new System.Drawing.Size(125, 22);
             this.agregarTSP.Text = "Agregar";
             this.agregarTSP.Click += new System.EventHandler(this.agregarTSP_Click);
             // 
             // modificarTSP
             // 
             this.modificarTSP.Name = "modificarTSP";
-            this.modificarTSP.Size = new System.Drawing.Size(180, 22);
+            this.modificarTSP.Size = new System.Drawing.Size(125, 22);
             this.modificarTSP.Text = "Modificar";
             // 
             // eliminarTSP
             // 
             this.eliminarTSP.Name = "eliminarTSP";
-            this.eliminarTSP.Size = new System.Drawing.Size(180, 22);
+            this.eliminarTSP.Size = new System.Drawing.Size(125, 22);
             this.eliminarTSP.Text = "Eliminar";
             // 
             // listarTSP
             // 
             this.listarTSP.Name = "listarTSP";
-            this.listarTSP.Size = new System.Drawing.Size(180, 22);
+            this.listarTSP.Size = new System.Drawing.Size(125, 22);
             this.listarTSP.Text = "Listar";
             this.listarTSP.Click += new System.EventHandler(this.listarTSP_Click);
             // 
@@ -106,6 +107,13 @@
             this.marcasTSP.Size = new System.Drawing.Size(57, 20);
             this.marcasTSP.Text = "Marcas";
             // 
+            // listarMarcasTSP
+            // 
+            this.listarMarcasTSP.Name = "listarMarcasTSP";
+            this.listarMarcasTSP.Size = new System.Drawing.Size(180, 22);
+            this.listarMarcasTSP.Text = "Listar Marcas";
+            this.listarMarcasTSP.Click += new System.EventHandler(this.listarMarcasTSP_Click);
+            // 
             // modMarcasTSP
             // 
             this.modMarcasTSP.DoubleClickEnabled = true;
@@ -116,6 +124,7 @@
             // categoriasTSP
             // 
             this.categoriasTSP.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listarCategoriasTSP,
             this.modCatTSP});
             this.categoriasTSP.Name = "categoriasTSP";
             this.categoriasTSP.Size = new System.Drawing.Size(75, 20);
@@ -162,12 +171,12 @@
             this.TSB2.Size = new System.Drawing.Size(23, 22);
             this.TSB2.Text = "toolStripButton3";
             // 
-            // listarMarcasTSP
+            // listarCategoriasTSP
             // 
-            this.listarMarcasTSP.Name = "listarMarcasTSP";
-            this.listarMarcasTSP.Size = new System.Drawing.Size(180, 22);
-            this.listarMarcasTSP.Text = "Listar Marcas";
-            this.listarMarcasTSP.Click += new System.EventHandler(this.listarMarcasTSP_Click);
+            this.listarCategoriasTSP.Name = "listarCategoriasTSP";
+            this.listarCategoriasTSP.Size = new System.Drawing.Size(182, 22);
+            this.listarCategoriasTSP.Text = "Listar categorias";
+            this.listarCategoriasTSP.Click += new System.EventHandler(this.listarCategoriasTSP_Click);
             // 
             // Form1
             // 
@@ -206,6 +215,7 @@
         private System.Windows.Forms.ToolStripMenuItem modCatTSP;
         private System.Windows.Forms.ToolStripMenuItem agregarTSP;
         private System.Windows.Forms.ToolStripMenuItem listarMarcasTSP;
+        private System.Windows.Forms.ToolStripMenuItem listarCategoriasTSP;
     }
 }
 

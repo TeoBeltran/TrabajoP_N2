@@ -14,11 +14,11 @@ namespace TP_WinForm
 {
     public partial class ListarMarcas : Form
     {
-        private List<Marca> maicraf;
-        public ListarMarcas(List<Marca> maicraf)
+        private List<Marca> marcas;
+        public ListarMarcas(List<Marca> marcas)
         {
             InitializeComponent();
-            this.maicraf = maicraf;
+            this.marcas = marcas;
         }
 
         private void ListarMarcas_Load(object sender, EventArgs e)
@@ -26,8 +26,8 @@ namespace TP_WinForm
             try
             {
                 MarcaNegocio negocioM = new MarcaNegocio();
-                maicraf = negocioM.ListarM();
-                dgvMarcas.DataSource = maicraf;
+                marcas = negocioM.ListarM();
+                dgvMarcas.DataSource = marcas;
             }
             catch (Exception)
             {

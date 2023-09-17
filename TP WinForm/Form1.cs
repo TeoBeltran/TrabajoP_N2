@@ -15,7 +15,9 @@ namespace TP_WinForm
     public partial class Form1 : Form
     {
         List<Articulo> catalogo = new List<Articulo>();
-        List<Marca> maicraf = new List<Marca>();
+        List<Marca> marcas = new List<Marca>();
+        List<Categoria> categorias=new List<Categoria>();
+
         public Form1()
         {
             InitializeComponent();
@@ -66,7 +68,22 @@ namespace TP_WinForm
                 }
             }
 
-            ListarMarcas ventana = new ListarMarcas(maicraf);
+            ListarMarcas ventana = new ListarMarcas(marcas);
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void listarCategoriasTSP_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(ListarCategorias))
+                {
+                    return;
+                }
+            }
+
+            ListarCategorias ventana = new ListarCategorias(categorias);
             ventana.MdiParent = this;
             ventana.Show();
         }
