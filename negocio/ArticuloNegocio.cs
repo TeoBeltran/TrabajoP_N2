@@ -60,7 +60,9 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) values (" + nuevo.Codigo + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', 2, 2, '" + nuevo.Precio + "')");
+                datos.setearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) values (" + nuevo.Codigo + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', @IdMarca, @IdCategoria, '" + nuevo.Precio + "')");
+                datos.setearParametro("@IdMarca", nuevo.IdMarca.Id);
+                datos.setearParametro("@IdCategoria", nuevo.IdCategoria.Id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

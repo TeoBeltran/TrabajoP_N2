@@ -45,6 +45,8 @@ namespace TP_WinForm
                 nuevoArticulo.Codigo = tbCod.Text;
                 nuevoArticulo.Nombre = tbName.Text;
                 nuevoArticulo.Descripcion = tbDesc.Text;
+                nuevoArticulo.IdMarca= (Marca)cbBrand.SelectedItem;
+                nuevoArticulo.IdCategoria = (Categoria)cbCat.SelectedItem;
                 nuevoArticulo.Precio = int.Parse(tbPrice.Text);
 
                 negocio.agregar(nuevoArticulo);

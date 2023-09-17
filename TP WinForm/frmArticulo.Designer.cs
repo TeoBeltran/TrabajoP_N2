@@ -78,6 +78,7 @@
             // 
             // cbCat
             // 
+            this.cbCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCat.FormattingEnabled = true;
             this.cbCat.Location = new System.Drawing.Point(91, 163);
             this.cbCat.Name = "cbCat";
@@ -93,6 +94,7 @@
             // 
             // cbBrand
             // 
+            this.cbBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBrand.FormattingEnabled = true;
             this.cbBrand.Location = new System.Drawing.Point(91, 128);
             this.cbBrand.Name = "cbBrand";
