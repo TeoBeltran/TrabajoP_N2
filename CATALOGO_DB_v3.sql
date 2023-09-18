@@ -105,28 +105,22 @@ insert into imagenes values
 (5, 'https://cnnespanol2.files.wordpress.com/2015/12/gadgets-mc3a1s-populares-apple-tv-2015-18.jpg?quality=100&strip=info&w=460&h=260&crop=1')
 
 
-Select * From ARTICULOS
-Select * From IMAGENES
-Select * From MARCAS
-Select * From CATEGORIAS
+--Select * From ARTICULOS
+--Select * From IMAGENES
+--Select * From MARCAS
 
-Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria From ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca=M.Id AND A.IdCategoria = C.Id
+--Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria From ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca=M.Id AND A.IdCategoria = C.Id
 
-insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) values ('AAA', 'NOMBRE', 'DESCRIP', 2, 2, 123123)
+--insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) values ('AAA', 'NOMBRE', 'DESCRIP', 2, 2, 123123)
 
-delete from ARTICULOS Where Id = 7
-
+--delete from ARTICULOS Where Id = 7
 
 
-Select Id From MARCAS Where Descripcion='Apple'
+--Select Id From MARCAS Where Descripcion='Apple'
 
 
+--Select IdArticulo, ImagenUrl From IMAGENES Where IdArticulo=1;
 
+--insert into imagenes values(6, 'https://media.sketchfab.com/models/f195689e96514dcfb791e9d2cd8ac67b/thumbnails/9b66a76e7b134561be3b91ec43be5c35/4af016724fde47baaa3237be11a3aa86.jpeg')
 
-
-
-Select IdArticulo, ImagenUrl From IMAGENES Where IdArticulo=1;
-
-insert into imagenes values(6, 'https://media.sketchfab.com/models/f195689e96514dcfb791e9d2cd8ac67b/thumbnails/9b66a76e7b134561be3b91ec43be5c35/4af016724fde47baaa3237be11a3aa86.jpeg')
-
-insert into IMAGENES (IdArticulo, ImagenUrl) values (1, '')
+--insert into IMAGENES (IdArticulo, ImagenUrl) values (1, '')
