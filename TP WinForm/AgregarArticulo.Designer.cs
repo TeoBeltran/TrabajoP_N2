@@ -45,8 +45,6 @@
             this.buttonAgregar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.pictureBoxUrl = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxUrl = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUrl)).BeginInit();
             this.SuspendLayout();
@@ -211,36 +209,18 @@
             this.pictureBoxUrl.TabIndex = 4;
             this.pictureBoxUrl.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(306, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Url";
-            // 
-            // textBoxUrl
-            // 
-            this.textBoxUrl.Location = new System.Drawing.Point(341, 76);
-            this.textBoxUrl.Name = "textBoxUrl";
-            this.textBoxUrl.Size = new System.Drawing.Size(107, 20);
-            this.textBoxUrl.TabIndex = 11;
-            // 
-            // frmArticulo
+            // AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(496, 383);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxUrl);
             this.Controls.Add(this.pictureBoxUrl);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAgregar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmArticulo";
+            this.Name = "AgregarArticulo";
             this.Text = "frmArticulo";
             this.Load += new System.EventHandler(this.frmArticulo_Load);
             this.groupBox1.ResumeLayout(false);
@@ -270,7 +250,5 @@
         private System.Windows.Forms.Button buttonAgregar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.PictureBox pictureBoxUrl;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxUrl;
     }
 }

@@ -162,5 +162,20 @@ namespace TP_WinForm
             ventana.MdiParent = this;
             ventana.Show();
         }
+
+        private void verDetalleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(VerArticulo))
+                {
+                    return;
+                }
+            }
+
+            VerArticulo ventana = new VerArticulo();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
     }
 }

@@ -51,7 +51,7 @@ namespace TP_WinForm
 
                 negocio.agregar(nuevoArticulo);
                 MessageBox.Show("Articulo agregado!");
-                this.Close();
+                LimpiarCampos();
             }
             catch (Exception ex)
             {
@@ -62,6 +62,16 @@ namespace TP_WinForm
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void LimpiarCampos()
+        {
+            tbCod.Clear();
+            tbName.Clear();
+            tbDesc.Clear();
+            //cbBrand.Clear();
+            //cbCat.Clear();
+            tbPrice.Clear();
         }
     }
 }
