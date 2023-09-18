@@ -33,8 +33,6 @@
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbCat = new System.Windows.Forms.TextBox();
-            this.tbBrand = new System.Windows.Forms.TextBox();
             this.cbCat = new System.Windows.Forms.ComboBox();
             this.cbBrand = new System.Windows.Forms.ComboBox();
             this.tbName = new System.Windows.Forms.TextBox();
@@ -89,8 +87,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tbCat);
-            this.groupBox1.Controls.Add(this.tbBrand);
             this.groupBox1.Controls.Add(this.cbCat);
             this.groupBox1.Controls.Add(this.cbBrand);
             this.groupBox1.Controls.Add(this.tbName);
@@ -107,25 +103,11 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
-            // tbCat
-            // 
-            this.tbCat.Location = new System.Drawing.Point(83, 128);
-            this.tbCat.Name = "tbCat";
-            this.tbCat.Size = new System.Drawing.Size(107, 20);
-            this.tbCat.TabIndex = 12;
-            // 
-            // tbBrand
-            // 
-            this.tbBrand.Location = new System.Drawing.Point(83, 93);
-            this.tbBrand.Name = "tbBrand";
-            this.tbBrand.Size = new System.Drawing.Size(107, 20);
-            this.tbBrand.TabIndex = 11;
-            // 
             // cbCat
             // 
             this.cbCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCat.FormattingEnabled = true;
-            this.cbCat.Location = new System.Drawing.Point(197, 128);
+            this.cbCat.Location = new System.Drawing.Point(83, 125);
             this.cbCat.Name = "cbCat";
             this.cbCat.Size = new System.Drawing.Size(107, 21);
             this.cbCat.TabIndex = 4;
@@ -134,7 +116,7 @@
             // 
             this.cbBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBrand.FormattingEnabled = true;
-            this.cbBrand.Location = new System.Drawing.Point(197, 93);
+            this.cbBrand.Location = new System.Drawing.Point(83, 90);
             this.cbBrand.Name = "cbBrand";
             this.cbBrand.Size = new System.Drawing.Size(107, 21);
             this.cbBrand.TabIndex = 3;
@@ -241,6 +223,7 @@
             this.Controls.Add(this.tbCod);
             this.Name = "ModificarArticulo";
             this.Text = "ModificarArticulo";
+            this.Load += new System.EventHandler(this.ModificarArticulo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -267,7 +250,5 @@
         private System.Windows.Forms.TextBox tbPrice;
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.TextBox tbCat;
-        private System.Windows.Forms.TextBox tbBrand;
     }
 }

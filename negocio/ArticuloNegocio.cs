@@ -121,5 +121,36 @@ namespace negocio
                 conexion.Close();
             }
         }
+
+        public void Modificar(Articulo articulo)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+
+            try
+            {
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "UPDATE ARTICULOS SET Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, Precio = @Precio WHERE Codigo = @Codigo";
+                comando.Parameters.AddWithValue("@Codigo", articulo.Codigo);
+                comando.Parameters.AddWithValue("@Nombre", articulo.Nombre);
+                comando.Parameters.AddWithValue("@Descripcion", articulo.Descripcion);
+                comando.Parameters.AddWithValue("@IdMarca", articulo.IdMarca.Id);
+                comando.Parameters.AddWithValue("@IdCategoria", articulo.IdCategoria.Id);
+                comando.Parameters.AddWithValue("@Precio", articulo.Precio);
+                comando.Connection = conexion;
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
     }
 }
