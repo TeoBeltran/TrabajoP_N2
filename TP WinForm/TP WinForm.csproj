@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarCategorias.Designer.cs">
+      <DependentUpon>AgregarCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMarcas.Designer.cs">
+      <DependentUpon>AgregarMarcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,8 +94,26 @@
     <Compile Include="ModificarArticulo.Designer.cs">
       <DependentUpon>ModificarArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarCategorias.Designer.cs">
+      <DependentUpon>ModificarCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarMarca.Designer.cs">
+      <DependentUpon>ModificarMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AgregarCategorias.resx">
+      <DependentUpon>AgregarCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMarcas.resx">
+      <DependentUpon>AgregarMarcas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +131,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarArticulo.resx">
       <DependentUpon>ModificarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarCategorias.resx">
+      <DependentUpon>ModificarCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarMarca.resx">
+      <DependentUpon>ModificarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

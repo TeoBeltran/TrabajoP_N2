@@ -102,5 +102,65 @@ namespace TP_WinForm
             ventana.MdiParent = this;
             ventana.Show();
         }
+
+        private void agregarMarcasTSP_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(AgregarMarcas))
+                {
+                    return;
+                }
+            }
+
+            AgregarMarcas ventana = new AgregarMarcas();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void agregarCatTSP_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(AgregarCategorias))
+                {
+                    return;
+                }
+            }
+
+            AgregarCategorias ventana = new AgregarCategorias();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void modMarcasTSP_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(ModificarMarca))
+                {
+                    return;
+                }
+            }
+
+            ModificarMarca ventana = new ModificarMarca();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void modCatTSP_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(ModificarCategorias))
+                {
+                    return;
+                }
+            }
+
+            ModificarCategorias ventana = new ModificarCategorias();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -55,13 +56,12 @@ namespace negocio
 
         public void agregar(Articulo nuevo)
         {
-            AccesoDatos datos=new AccesoDatos();
-
+            AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) values (" + nuevo.Codigo + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', @IdMarca, @IdCategoria, '" + nuevo.Precio + "')");
-                datos.setearParametro("@IdMarca", nuevo.IdMarca.Id);
-                datos.setearParametro("@IdCategoria", nuevo.IdCategoria.Id);
+                datos.setearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) values ('" + nuevo.Codigo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion + "','" + nuevo.Precio + "', @idMarca, @idCategoria)");
+                datos.setearParametro("@idMarca", nuevo.IdMarca.Id);
+                datos.setearParametro("@idCategoria", nuevo.IdCategoria.Id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
